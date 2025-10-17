@@ -14,5 +14,14 @@
 # limitations under the License.
 #
 
+# Include touch firmware in recovery
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/vendor/firmware/touchscreen/hx83112f_BOE_FW.bin:recovery/root/vendor/firmware/hx83112f_BOE_FW.bin \
+    $(DEVICE_PATH)/vendor/firmware/touchscreen/hx83112f_BOE_mp.bin:recovery/root/vendor/firmware/hx83112f_BOE_mp.bin \
+    $(DEVICE_PATH)/vendor/firmware/touchscreen/hx83112f_TXD_FW.bin:recovery/root/vendor/firmware/hx83112f_TXD_FW.bin \
+    $(DEVICE_PATH)/vendor/firmware/touchscreen/hx83112f_TXD_mp.bin:recovery/root/vendor/firmware/hx83112f_TXD_mp.bin \
+    $(DEVICE_PATH)/vendor/firmware/touchscreen/chipone_firmware.bin:recovery/root/vendor/firmware/chipone_firmware.bin \
+    $(DEVICE_PATH)/vendor/firmware/touchscreen/chipone_limit.bin:recovery/root/vendor/firmware/chipone_limit.bin
+
 # Inherit from common tree
 $(call inherit-product, device/samsung/bengal-common/twrp_bengal-common.mk)
